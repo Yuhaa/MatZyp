@@ -12,6 +12,7 @@ import GooglePlaces
 
 class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDelegate, LocateOnTheMap, GMSAutocompleteFetcherDelegate, CLLocationManagerDelegate{
 
+    var markers : [GMSMarker] = []
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = self.tabBarController?.tabBar.items?[1].title
@@ -96,6 +97,8 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         gwangMoonMarker.title = "광화문집"
         gwangMoonMarker.map = myMap
         gwangMoonMarker.userData = [1,0]
+        
+        markers = [alchoneMarker, hanyangChoneMarker, daedoSikttangMarker, gwangMoonMarker]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -125,6 +128,23 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
             
         }
         
+    }
+    
+    func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
+        var infoWindow = Bundle.main.loadNibNamed("CustomMarker", owner: self, options: nil)?.first as! CustomMarker
+        
+        infoWindow.label.text = marker.title
+        let selectIndexSet = marker.userData as! Array<Int>
+        let location = dataCenter.locations[selectIndexSet[0]] as Location
+        //let matzyp = location.matzyps?[selectIndexSet[1]]
+        guard let matzyp = location.matzyps?[selectIndexSet[1]] else{
+            return infoWindow
+        }
+        infoWindow.image.image = matzyp.menus?[0].img
+        infoWindow.rating.rating = (matzyp.rate)
+        infoWindow.count.text = String(matzyp.reviews.count)
+        
+        return infoWindow
     }
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {

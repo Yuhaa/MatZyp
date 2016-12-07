@@ -45,6 +45,8 @@
 		CE16A1171DE0663E00DED5E7 /* GMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE16A1161DE0663E00DED5E7 /* GMapViewController.swift */; };
 		CEADF87C1DE827940015FC0A /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEADF87B1DE827940015FC0A /* SearchResultController.swift */; };
 		CEB7CBE71DE065F2000D8A2E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEB7CBE61DE065F2000D8A2E /* Podfile */; };
+		CEC24E781DF804B70095B9AD /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC24E771DF804B70095B9AD /* CustomMarker.swift */; };
+		CEC24E7C1DF80CB00095B9AD /* CustomMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC24E7B1DF80CB00095B9AD /* CustomMarker.xib */; };
 		CEFA53B11DED6FB3002CFD83 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA53B01DED6FB3002CFD83 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		CE16A1161DE0663E00DED5E7 /* GMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMapViewController.swift; sourceTree = "<group>"; };
 		CEADF87B1DE827940015FC0A /* SearchResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResultController.swift; path = ../SearchResultController.swift; sourceTree = "<group>"; };
 		CEB7CBE61DE065F2000D8A2E /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEC24E771DF804B70095B9AD /* CustomMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		CEC24E7B1DF80CB00095B9AD /* CustomMarker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomMarker.xib; path = ../../../../Downloads/CustomMarker.xib; sourceTree = "<group>"; };
 		CEFA53B01DED6FB3002CFD83 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EA6FD20E841CCD1BF6D22258 /* Pods-MatZyp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatZyp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatZyp/Pods-MatZyp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				CEADF87B1DE827940015FC0A /* SearchResultController.swift */,
+				CEC24E7B1DF80CB00095B9AD /* CustomMarker.xib */,
+				CEC24E771DF804B70095B9AD /* CustomMarker.swift */,
 				CE16A1161DE0663E00DED5E7 /* GMapViewController.swift */,
 			);
 			name = GoogleMap;
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36CE297D1DC869040087F8F3 /* LaunchScreen.storyboard in Resources */,
+				CEC24E7C1DF80CB00095B9AD /* CustomMarker.xib in Resources */,
 				36CE297A1DC869040087F8F3 /* Assets.xcassets in Resources */,
 				CEB7CBE71DE065F2000D8A2E /* Podfile in Resources */,
 				36CE29781DC869040087F8F3 /* Main.storyboard in Resources */,
@@ -397,6 +404,7 @@
 				B2E3E0B71DF6AFA400840F65 /* DetailImageViewController.swift in Sources */,
 				B2BA89A81DD881EB00FC0C13 /* SecondCell.swift in Sources */,
 				B2BA89A61DD86B7000FC0C13 /* InfoListViewController.swift in Sources */,
+				CEC24E781DF804B70095B9AD /* CustomMarker.swift in Sources */,
 				B2BA89AA1DD883EC00FC0C13 /* FourthCell.swift in Sources */,
 				B2BA89B01DD8840C00FC0C13 /* SeventhCell.swift in Sources */,
 				369A7E7C1DD5ACE3009FCB39 /* LanguageModalViewController.swift in Sources */,
