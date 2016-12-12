@@ -58,6 +58,7 @@ class ReviewTableViewController: UITableViewController, UIGestureRecognizerDeleg
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondViewController = storyboard.instantiateViewController(withIdentifier: "writeReview") as! UINavigationController
         self.present(secondViewController, animated: true, completion: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,6 +67,8 @@ class ReviewTableViewController: UITableViewController, UIGestureRecognizerDeleg
     }
     
     func addNewReview(review: Review) {
+        //review에 업데이트가 늦게됨..
+        //review.text = [.korean:"test",.english:"test",.chinese:"test"]
         self.matzyp?.reviews.append(review)
         self.matzyp?.GetRate()
         

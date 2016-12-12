@@ -14,6 +14,7 @@ class WriteReviewTableViewController: UITableViewController, UITextViewDelegate,
     @IBOutlet weak var rating: CosmosView!
     @IBOutlet weak var userReview: UITextView!
     @IBOutlet weak var userImage: UIImageView!
+    var closureUpdateUI:(()->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +108,13 @@ class WriteReviewTableViewController: UITableViewController, UITextViewDelegate,
                 }
                 review.text[.english] = res
                 print(res)
+                if let updateUI = self.closureUpdateUI{
+                    //print ("hi"+res)
+                    OperationQueue.main.addOperation({
+                        updateUI()
+                    })
+                }
+
             }
             
             params3.target = "zh"
@@ -154,29 +162,34 @@ class WriteReviewTableViewController: UITableViewController, UITextViewDelegate,
     
     
     @IBAction func saveClick(_ sender: Any) {
-        guard let review = makeReview() else {
+        
+        guard let review = self.makeReview() else {
             self.dismiss(animated: true, completion: nil)
             return
         }
         
-        switch self.presentingViewController {
+        self.closureUpdateUI = {[unowned self] () -> () in
+            
+            switch self.presentingViewController {
             case let tabBarC as UITabBarController:
                 if let navigationC = tabBarC.selectedViewController as? UINavigationController, let segviewC = navigationC.topViewController as? SegViewController, let reviewC = segviewC.currentViewController as? ReviewTableViewController {
                     reviewC.addNewReview(review: review)
-                    }
+                }
             case let navigationC as UINavigationController:
                 if let segviewC = navigationC.topViewController as? SegViewController, let reviewC = segviewC.currentViewController as? ReviewTableViewController {
                     reviewC.addNewReview(review: review)
-                    }
+                }
             case let reviewC as ReviewTableViewController:
                 reviewC.addNewReview(review: review)
             default:
                 break
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+
         }
         
         
-            // your code with delay
-            self.dismiss(animated: true, completion: nil)
             
         
         

@@ -35,7 +35,10 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         for prediction in predictions {
             
             if let prediction = prediction as GMSAutocompletePrediction!{
-                self.resultArray.append(prediction.attributedFullText.string)
+                let newMark = GMSMarker()
+                newMark.title = prediction.attributedFullText.string
+                //self.resultArray.append(prediction.attributedFullText.string)
+                self.resultArray.append(newMark)
             }
         }
         self.searchResultController.reloadDataWithArray(self.resultArray)
@@ -46,7 +49,7 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
     @IBOutlet weak var myMap: GMSMapView!
     
     var searchResultController : SearchResultsController!
-    var resultArray = [String]()
+    var resultArray = [GMSMarker]()
     var gmsFetcher: GMSAutocompleteFetcher!
     let locationManager = CLLocationManager()
     
@@ -131,7 +134,7 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
     }
     
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-        var infoWindow = Bundle.main.loadNibNamed("CustomMarker", owner: self, options: nil)?.first as! CustomMarker
+        let infoWindow = Bundle.main.loadNibNamed("CustomMarker", owner: self, options: nil)?.first as! CustomMarker
         
         infoWindow.label.text = marker.title
         let selectIndexSet = marker.userData as! Array<Int>
@@ -140,7 +143,7 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         guard let matzyp = location.matzyps?[selectIndexSet[1]] else{
             return infoWindow
         }
-        infoWindow.image.image = matzyp.menus?[0].img
+        infoWindow.image.image = matzyp.img
         infoWindow.rating.rating = (matzyp.rate)
         infoWindow.count.text = String(matzyp.reviews.count)
         
@@ -199,6 +202,11 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         
         self.resultArray.removeAll()
         gmsFetcher?.sourceTextHasChanged(searchText)
+        for m in markers {
+            if m.title?.contains(searchText) == true{
+                self.resultArray.append(m)
+            }
+        }
         
         
     }

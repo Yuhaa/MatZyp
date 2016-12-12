@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbM-rh-id6">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cbM-rh-id6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -706,7 +706,7 @@
             <objects>
                 <navigationController id="060-oh-8rW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="지역" image="LocationList" id="lZP-FU-QPQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Mh8-oq-gm6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mh8-oq-gm6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -964,7 +964,7 @@
                 <navigationController storyboardIdentifier="GMapViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SJ6-gy-yHn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="지도" image="GoogleMap" id="cVe-Q0-9Wi"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PVQ-ze-3XB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PVQ-ze-3XB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1078,7 +1078,7 @@
         <scene sceneID="7mb-5d-1Uh">
             <objects>
                 <navigationController storyboardIdentifier="writeReview" id="PrF-W9-1Be" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Cg-CW-BYK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Cg-CW-BYK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1118,7 +1118,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zxh-2g-e1j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="설정" image="Setting" id="xdT-D6-PIM"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="X4e-9Y-gCw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X4e-9Y-gCw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

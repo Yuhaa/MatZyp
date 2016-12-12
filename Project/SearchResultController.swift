@@ -8,6 +8,7 @@
 
 
 import UIKit
+import GoogleMaps
 
 protocol LocateOnTheMap{
     func locateWithLongitude(_ lon:Double, andLatitude lat:Double, andTitle title: String)
@@ -15,7 +16,8 @@ protocol LocateOnTheMap{
 
 class SearchResultsController: UITableViewController {
     
-    var searchResults: [String]!
+    //var searchResults: [String]!
+    var searchResults: [GMSMarker]!
     var delegate: LocateOnTheMap!
     
     override func viewDidLoad() {
@@ -46,7 +48,7 @@ class SearchResultsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
         
-        cell.textLabel?.text = self.searchResults[indexPath.row]
+        cell.textLabel?.text = self.searchResults[indexPath.row].title
         return cell
     }
     
@@ -57,7 +59,7 @@ class SearchResultsController: UITableViewController {
         // 1
         self.dismiss(animated: true, completion: nil)
         // 2
-        let urlpath = "https://maps.googleapis.com/maps/api/geocode/json?address=\(self.searchResults[indexPath.row])&sensor=false".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlpath = "https://maps.googleapis.com/maps/api/geocode/json?address=\(self.searchResults[indexPath.row].title)&sensor=false".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         let url = URL(string: urlpath!)
         // print(url!)
@@ -65,14 +67,20 @@ class SearchResultsController: UITableViewController {
             // 3
             
             do {
-                if data != nil{
+                if self.searchResults[indexPath.row].userData != nil {
+                    let pos = self.searchResults[indexPath.row].position
+                    let lat = pos.latitude
+                    let lon = pos.longitude
+                    self.delegate.locateWithLongitude(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row].title!)
+                }
+                else if data != nil{
                     let dic = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) as! NSDictionary
                     
                     let lat =   (((((dic.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lat")) as! Double
                     
                     let lon =   (((((dic.value(forKey: "results") as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "geometry") as! NSDictionary).value(forKey: "location") as! NSDictionary).value(forKey: "lng")) as! Double
                     // 4
-                    self.delegate.locateWithLongitude(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row])
+                    self.delegate.locateWithLongitude(lon, andLatitude: lat, andTitle: self.searchResults[indexPath.row].title!)
                 }
                 
             }catch {
@@ -84,7 +92,7 @@ class SearchResultsController: UITableViewController {
     }
     
     
-    func reloadDataWithArray(_ array:[String]){
+    func reloadDataWithArray(_ array:[GMSMarker]){
         self.searchResults = array
         self.tableView.reloadData()
     }
