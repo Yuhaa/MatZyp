@@ -101,7 +101,97 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         gwangMoonMarker.map = myMap
         gwangMoonMarker.userData = [1,0]
         
-        markers = [alchoneMarker, hanyangChoneMarker, daedoSikttangMarker, gwangMoonMarker]
+        let robotgimbapMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.robotkimbab.latitude, longitude: dataCenter.robotkimbab.longitude))
+        robotgimbapMarker.title = "로봇김밥"
+        robotgimbapMarker.map = myMap
+        robotgimbapMarker.userData = [0,0]
+        
+        let sonyeonsanhoiMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.sonyeonsanghoi.latitude, longitude: dataCenter.sonyeonsanghoi.longitude))
+        sonyeonsanhoiMarker.title = "소년상회"
+        sonyeonsanhoiMarker.map = myMap
+        sonyeonsanhoiMarker.userData = [0,1]
+        
+        let daegalzipMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.daegalzip.latitude, longitude: dataCenter.daegalzip.longitude))
+        daegalzipMarker.title = "대갈집"
+        daegalzipMarker.map = myMap
+        daegalzipMarker.userData = [0,2]
+        
+        let samsungredMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.samsungred.latitude, longitude: dataCenter.samsungred.longitude))
+        samsungredMarker.title = "삼성빨간양념"
+        samsungredMarker.map = myMap
+        samsungredMarker.userData = [1,1]
+        
+        let sinanchonMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.sinanchon.latitude, longitude: dataCenter.sinanchon.longitude))
+        sinanchonMarker.title = "신안촌"
+        sinanchonMarker.map = myMap
+        sinanchonMarker.userData = [1,2]
+        
+        let surakioMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.surakio.latitude, longitude: dataCenter.surakio.longitude))
+        surakioMarker.title = "수락이오냉면"
+        surakioMarker.map = myMap
+        surakioMarker.userData = [2,0]
+        
+        let terminiMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.termini.latitude, longitude: dataCenter.termini.longitude))
+        terminiMarker.title = "테르미니"
+        terminiMarker.map = myMap
+        terminiMarker.userData = [2,1]
+        
+        let chammannaMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.chammanna.latitude, longitude: dataCenter.chammanna.longitude))
+        chammannaMarker.title = "참만나(노원)"
+        chammannaMarker.map = myMap
+        chammannaMarker.userData = [2,2]
+        
+        let haemateaMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.haematea.latitude, longitude: dataCenter.haematea.longitude))
+        haemateaMarker.title = "해마티룸"
+        haemateaMarker.map = myMap
+        haemateaMarker.userData = [3,0]
+        
+        let bomgasMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.bomgas.latitude, longitude: dataCenter.bomgas.longitude))
+        bomgasMarker.title = "봄까스"
+        bomgasMarker.map = myMap
+        bomgasMarker.userData = [3,1]
+        
+        let sogumiMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.sogumi.latitude, longitude: dataCenter.sogumi.longitude))
+        sogumiMarker.title = "소구미"
+        sogumiMarker.map = myMap
+        sogumiMarker.userData = [3,2]
+        
+        let hamnamMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.hamnam.latitude, longitude: dataCenter.hamnam.longitude))
+        hamnamMarker.title = "함남곱창"
+        hamnamMarker.map = myMap
+        hamnamMarker.userData = [4,0]
+        
+        let northseaMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.northsea.latitude, longitude: dataCenter.northsea.longitude))
+        northseaMarker.title = "북해빙수"
+        northseaMarker.map = myMap
+        northseaMarker.userData = [4,1]
+        
+        let cryroadMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.cryroad.latitude, longitude: dataCenter.cryroad.longitude))
+        cryroadMarker.title = "크라이로드노이"
+        cryroadMarker.map = myMap
+        cryroadMarker.userData = [4,2]
+        
+        let redsunMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.redsun.latitude, longitude: dataCenter.redsun.longitude))
+        redsunMarker.title = "레드썬"
+        redsunMarker.map = myMap
+        redsunMarker.userData = [5,0]
+        
+        let mpizzaMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.mpizza.latitude, longitude: dataCenter.mpizza.longitude))
+        mpizzaMarker.title = "명동피자"
+        mpizzaMarker.map = myMap
+        mpizzaMarker.userData = [5,1]
+        
+        let ioknyeoMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.ioknyeo.latitude, longitude: dataCenter.ioknyeo.longitude))
+        ioknyeoMarker.title = "명동피자"
+        ioknyeoMarker.map = myMap
+        ioknyeoMarker.userData = [6,0]
+        
+        let tianpanMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: dataCenter.tianpan.latitude, longitude: dataCenter.tianpan.longitude))
+        tianpanMarker.title = "명동피자"
+        tianpanMarker.map = myMap
+        tianpanMarker.userData = [6,1]
+        
+        markers = [alchoneMarker, hanyangChoneMarker, daedoSikttangMarker, gwangMoonMarker, robotgimbapMarker, sonyeonsanhoiMarker, daegalzipMarker, samsungredMarker, sinanchonMarker, surakioMarker, terminiMarker, chammannaMarker, haemateaMarker, bomgasMarker, sogumiMarker, hamnamMarker, northseaMarker, cryroadMarker, redsunMarker, mpizzaMarker, ioknyeoMarker, tianpanMarker]
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -143,7 +233,7 @@ class GMapViewController: UIViewController, GMSMapViewDelegate, UISearchBarDeleg
         guard let matzyp = location.matzyps?[selectIndexSet[1]] else{
             return infoWindow
         }
-        infoWindow.image.image = matzyp.img
+        infoWindow.image.image = matzyp.menus?[0].img
         infoWindow.rating.rating = (matzyp.rate)
         infoWindow.count.text = String(matzyp.reviews.count)
         

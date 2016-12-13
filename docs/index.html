@@ -11,83 +11,162 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/animate.css"/>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-
-		<!-- Header -->
+        <!-- Banner -->
+        <section id="banner">
+            <div class="dark">
+                <a href="#first" class="feature-icon-h scrolly"><span class="icon fa-cutlery"></span></a>
+                <header>
+                <h1>MatZyp</h1>
+                <p>양심없는 이중 메뉴판은<br/>이제 그만</p>
+                </header>
+                <ul class="actions">
+                </ul>
+            </div>
+            <a href="#header" class="more scrolly">Why MatZyp?</a>
+        </section>
+        
+        
+        <!-- Header -->
 			<section id="header" class="dark">
+               
 				<header>
-					<h1>Welcome to Tessellate</h1>
-					<p>A free responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+                    
+					<h1>서울에 여행을 온 외국인들이 원하는 현지인들의 음식문화 소개</h1>
 				</header>
+                <p><span id="highlight">호갱이 되는것을 막기위해</span> 여러 방송프로와 음식 가이드에서 소개하는 맛집 정보 소개
+                <br><br><span id="highlight">한글을 잘 모르더라도</span> 맛있게 즐길 수 있도록 언어 변경 기능 탑재
+                <br><br><span id="highlight">실시간 번역 기능을 통해</span> 여러 언어로 작성한 양질의 후기 정보 공유 가능
+                </p>
 				<footer>
-					<a href="#first" class="button scrolly">Proceed to second phase</a>
+                    
+					<a href="#func1" class="button scrolly">기능 소개</a>
 				</footer>
+               
 			</section>
-
 		<!-- First -->
-			<section id="first" class="main">
-				<header>
+			<section  class="main">
+				<!--header>
 					<div class="container">
 						<h2>Tessellate is a free responsive site template</h2>
 						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
 						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
 					</div>
-				</header>
+				</header-->
 				<div class="content dark style1 featured">
-					<div class="container">
-						<div class="row">
+					<div id="first" class="container">
+						<div id="func1" class="row">
 							<div class="4u 12u(narrow)">
 								<section>
-									<span class="feature-icon"><span class="icon fa-clock-o"></span></span>
+									<span class="feature-icon"><span class="icon fa-language"></span></span>
 									<header>
-										<h3>Gravida</h3>
+										<h3>번역 서비스</h3>
 									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
+									<p>한국어,영어,중국어 등 언어간 번역 기능을 제공합니다.
+                                    <br>동시에 두 언어로 보고 싶은 경우를 위해 수시로 변경이 가능하도록 하였습니다.
+                                    <br>한국어를 잘 몰라도 현지 식당에 가서 쉽게 주문할 수 있습니다.
+                                    </p>
+                                    <footer>
+                                        <a href="#func2" class="button scrolly">다음 기능</a>
+                                    </footer>
 								</section>
 							</div>
-							<div class="4u 12u(narrow)">
-								<section>
-									<span class="feature-icon"><span class="icon fa-bolt"></span></span>
-									<header>
-										<h3>Vivamus</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
-							</div>
-							<div class="4u 12u(narrow)">
-								<section>
-									<span class="feature-icon"><span class="icon fa-cloud"></span></span>
-									<header>
-										<h3>Accumsan</h3>
-									</header>
-									<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
-									Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
-									ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-									accumsan vivamus.</p>
-								</section>
+							<div class="7u 12u(narrow)">
+                                <iframe id="show_video" src="https://www.youtube.com/embed/PePMXtRyI1I" frameborder="0" allowfullscreen></iframe>
+                                <!--
+								replace to the video using funcion
+                                 -->
 							</div>
 						</div>
-						<div class="row">
+						<!--div class="row">
 							<div class="12u">
 								<footer>
-									<a href="#second" class="button scrolly">Gravida tempor lacinia</a>
+									<a href="#func2" class="button scrolly">Gravida tempor lacinia</a>
 								</footer>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
+						</div-->
+                        <div id="func2" class="row">
+                            <div class="4u 12u(narrow)">
+                                <section>
+                                    <span class="feature-icon"><span class="icon fa-map-marker"></span></span>
+                                    <header>
+                                        <h3>지도 정보</h3>
+                                    </header>
+                                    <p>서울의 주요 위치 정보와 더불어 현재 자신의 위치 기반 지도 정보가 제공됩니다.
+                                    <br>손쉽게 자신의 주변에 위치한 맛집을 확인할 수 있습니다.
+                                    <br>그 외에도 지도 상에서 찾고자 하는 맛집이 어디에 있는지 검색이 가능합니다.
+                                    </p>
+                                    <footer>
+                                        <a href="#func3" class="button scrolly">다음 기능</a>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="7u 12u(narrow)">
+                                <iframe id="show_video" src="https://www.youtube.com/embed/PePMXtRyI1I" frameborder="0" allowfullscreen></iframe>
+                                <!--img src="images/iphone_module.png"/-->
+                                <!--
+                                 replace to the video using funcion
+                                 -->
+                            </div>
+                        </div>
+                        <div id="func3" class="row">
+                            <div class="4u 12u(narrow)">
+                                <section>
+                                    <span class="feature-icon"><span class="icon fa-pencil-square-o"></span></span>
+                                    <header>
+                                        <h3>후기 작성</h3>
+                                    </header>
+                                    <p>맛집에 대한 정보를 다른 사람들이 작성한 후기를 통해 얻을 수 있습니다.
+                                    <br>또한 직접 사진과 3줄 정도의 후기를 작성할 수 있으며 별점도 매길 수 있습니다.
+                                    <br>후기 정보에도 번역 서비스가 제공되어 다른나라 사람들이 쓴 후기도 볼 수 있습니다.
+                                    </p>
+                                    <footer>
+                                        <a href="#func4" class="button scrolly">다음 기능</a>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="7u 12u(narrow)">
+                                <iframe id="show_video" src="https://www.youtube.com/embed/PePMXtRyI1I" frameborder="0" allowfullscreen></iframe>
+                                <!--img src="images/iphone_module.png"/-->
+                                <!--
+                                 replace to the video using funcion
+                                 -->
+                            </div>
+                        </div>
+                        <div id="func4" class="row">
+                            <div class="4u 12u(narrow)">
+                                <section>
+                                    <span class="feature-icon"><span class="icon fa-facebook-square"></span></span>
+                                    <header>
+                                        <h3>페이스북 연동 및 부가기능</h3>
+                                    </header>
+                                    <p>페이스북 연동을 통해 로그인이 가능하며 로그인을 해야지만 후기를 작성할 수 있습니다.
+                                    <br>운영 정보, 메뉴 정보, 후기 정보를 이용하여 맛집을 소개하고 있습니다.
+                                    <br>3D touch기능을 구현하여 번거롭지 않게 메뉴 정보를 간편하게 제공합니다.
+                                    </p>
+                                    <footer>
+                                        <a href="#third" class="button scrolly">시연 영상</a>
+                                    </footer>
+                                </section>
+                            </div>
+                            <div class="7u 12u(narrow)">
+                                <iframe id="show_video" src="https://www.youtube.com/embed/PePMXtRyI1I" frameborder="0" allowfullscreen></iframe>
+                                <!--img src="images/iphone_module.png"/-->
+                                <!--
+                                 replace to the video using funcion
+                                 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
 		<!-- Second -->
+        <!--
 			<section id="second" class="main">
 				<header>
 					<div class="container">
@@ -129,242 +208,36 @@
 					</div>
 				</div>
 			</section>
-
+         -->
 		<!-- Third -->
 			<section id="third" class="main">
-				<header>
+				<!--header>
 					<div class="container">
 						<h2>Ornare varius lorem ipsum ante lectus</h2>
 						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
 						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
 					</div>
-				</header>
-				<div class="content dark style3">
+				</header-->
+
+                <div class="content dark style3">
+                    <section id="last">
+                        <header>
+                            <h2>시연 영상</h2>
+                            
+                        </header>
+                    </section>
 					<div class="container">
 						<span class="image featured"><img src="images/pic07.jpg" alt="" /></span>
-						<div class="row">
-							<div class="4u 12u(narrow)">
-								<h3>Diam vivamus turpis lorem sodales lectus ornare</h3>
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu eget ornare varius
-								gravida dolore euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu
-								eget ornare et magna.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
-								tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
-								vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
-								augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
-								euismod lorem ipsum dolor sit amet consequat eget ornare varius gravida euismod.
-								Gravida dis lorem ipsum dolor placerat magna tempus feugiat magna tempus lorem.</p>
-								<p>Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
-								accumsan vivamus augue cubilia.</p>
-							</div>
-							<div class="4u 12u(narrow)">
-								<p>Placerat lectus ante vel nunc euismod est turpis sodales. Diam tempor dui
-								lacinia eget ornare varius gravida. Gravida dis placerat lectus ante vel nunc
-								euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus augue
-								cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
-								lorem ipsum dolor placerat magna tempus feugiat. Lectus ante vel nunc euismod
-								est turpis sodales. Diam tempor dui lacinia dolore.</p>
-								<p>Accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida
-								dolore euismod lorem ipsum dolor sit amet conseismod lorem ipsum dolor sit amet
-								consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.</p>
-								<footer>
-									<a href="#fourth" class="button scrolly">Ipsum ornare lorem dolor</a>
-								</footer>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
-
-		<!-- Basic Elements -->
-		<!--
-			<section class="main">
-				<header>
-					<div class="container">
-						<h2>A Whole Lotta Elements</h2>
-						<p>General purpose elements for every general purpose. Or something like that.</p>
-					</div>
-				</header>
-				<div class="content style1 dark">
-					<div class="container">
-						<section>
-							<header>
-								<h3>Paragraph</h3>
-								<p>This is a byline</p>
-							</header>
-							<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-							habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-							leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-							amet risus elit.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Blockquote</h3>
-							</header>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-							tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
-							tempus ante ipsum primis in faucibus orci luctus et ultrices.</blockquote>
-						</section>
-						<section>
-							<header>
-								<h3>Divider</h3>
-							</header>
-							<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-							<hr />
-							<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-							ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-							facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-							tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-							posuere cubilia.</p>
-						</section>
-						<section>
-							<header>
-								<h3>Unordered List</h3>
-							</header>
-							<ul class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ul>
-						</section>
-						<section>
-							<header>
-								<h3>Ordered List</h3>
-							</header>
-							<ol class="default">
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-								<li>Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.</li>
-							</ol>
-						</section>
-						<section>
-							<header>
-								<h3>Table</h3>
-							</header>
-							<div class="table-wrapper">
-								<table class="default">
-									<thead>
-										<tr>
-											<th>ID</th>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>00001</td>
-											<td>Lorem ipsum dolor</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00002</td>
-											<td>Sit amet nullam</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00003</td>
-											<td>Feugiat felis viverra</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>00004</td>
-											<td>Sagittis enim felis</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>00005</td>
-											<td>Nullam sed vestibulum</td>
-											<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-											<td>19.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-						<section>
-							<header>
-								<h3>Form</h3>
-							</header>
-							<form method="post" action="#">
-								<div class="row 50%">
-									<div class="6u 12u(narrow)">
-										<input type="text" name="name" id="name" value="" placeholder="John Doe" />
-									</div>
-									<div class="6u 12u(narrow)">
-										<input type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<div class="select" tabindex="-1">
-											<select name="department" id="department">
-												<option value="">Choose a department</option>
-												<option value="1">Manufacturing</option>
-												<option value="2">Administration</option>
-												<option value="3">Support</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<input type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
-									</div>
-								</div>
-								<div class="row 50%">
-									<div class="12u">
-										<textarea name="message" id="message" placeholder="Enter your message"></textarea>
-									</div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<ul class="actions">
-											<li><input type="submit" class="button" value="Send Message" /></li>
-											<li><input type="reset" class="button alt" value="Clear Form" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-					</div>
-				</div>
-			</section>
-		-->
-
+        
 		<!-- Fourth -->
+        <!--
 			<section id="fourth" class="main">
 				<header>
 					<div class="container">
-						<h2>Sed feugiat ipsum consequat</h2>
+						<h2>시연 영상</h2>
 						<p>Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat<br />
 						feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.</p>
 					</div>
@@ -391,10 +264,18 @@
 					</div>
 				</div>
 			</section>
-
+            -->
 		<!-- Footer -->
 			<section id="footer">
-				<ul class="icons">
+                <section>
+                    <h2>About us</h2>
+                    <p>Team JustJunk<br>강준모, 박경원, 이재훈
+                    <br>Hanyang University (Seoul, Korea)</p>
+                    </li>
+                    </ul>
+                </section>
+                
+                <ul class="icons">
 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
